@@ -1,0 +1,19 @@
+{
+  "name": "apidump",
+  "description": "Simple Api Dumper",
+  "repository": "https://github.com/uniibu/apidump",
+  "keywords": [
+    "apidump"
+  ],
+  "website": "https://uniibu.github.io/apidump",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "value": "production"
+    }
+  }
+}
