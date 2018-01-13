@@ -1,0 +1,45 @@
+{% extends 'master.html' %} {% block embed %}
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">API DUMP</a>
+    </div>
+
+    <!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h2>Instructions</h2>
+    <p>Send any type of request to this url
+      <code id="apiurl">{{apiurl}}</code> and it will dump anything it receives on the result box.
+    </p>
+    <p>Note: Results are in real-time, nothing is saved on your session, cookies or any type of storage. Therefor there is no way to retrieve a previous result.</p>
+
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Result</h2>
+      <textarea id="resultbox" class="boxsizingBorder"></textarea>
+
+    </div>
+
+  </div>
+
+  <hr>
+
+
+</div>
+{% endblock %} {% block scripts %}{% endblock %}
