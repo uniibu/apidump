@@ -26,7 +26,15 @@ app.use(serve('public'));
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('koa-logger')());
 }
-app.use(require('koa-body')());
+app.use(
+    require('koa-bodyparser')({
+      extendTypes: { json: ['text/plain'] },
+      enableTypes: ['json'],
+      onerror(err, ctx) {
+        ctx.throw(422, JSON.stringify({ error: 'Error parsing request', err }));
+      }
+    })
+);
 app.use(mw.methodOverride());
 app.use(mw.removeTrailingSlash());
 app.use(bouncer.middleware());

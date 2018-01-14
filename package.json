@@ -25,6 +25,7 @@
     "koa": "^2.4.1",
     "koa-better-static2": "^1.0.2",
     "koa-body": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
     "koa-bouncer": "^6.0.4",
     "koa-compress": "^2.0.0",
     "koa-helmet": "^3.3.0",
