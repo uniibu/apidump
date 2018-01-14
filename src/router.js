@@ -12,9 +12,9 @@ router.all('/api/:user', ctx => {
   const socketid = ctx.vals.user;
   const socket = ctx.app.io.socket;
   let b = JSON.stringify(ctx.request, null, 2);
-  if (Object.keys(ctx.request.body).length) {
-    b = b + JSON.stringify(ctx.request.body, null, 2);
-  }
+
+  b = b + JSON.stringify(ctx.request.body, null, 2);
+
   socket.to(socketid).emit('result', b);
   ctx.body = 'ok';
 });
