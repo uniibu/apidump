@@ -21,7 +21,7 @@ router.all('/api/:user', ctx => {
   const socket = ctx.app.io.socket;
   const b = `
 --General--
-Request URL: ${config.URL + ctx.request.url}
+Request URL: ${ctx.request.headers.host + ctx.request.url}
 Request Method: ${ctx.request.method}
 
 --Headers--
