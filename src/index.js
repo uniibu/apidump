@@ -50,8 +50,8 @@ app._io.on('connection', sock => {
 });
 
 app.start = (port = config.PORT) => {
-  app.listen(port, () => {
-    console.log('Listening on port', port);
+  app.listen(8337, '0.0.0.0', () => {
+    console.log('Listening on port', 8337);
   });
 };
 module.exports = app;
