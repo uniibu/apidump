@@ -33,6 +33,6 @@
     "koa-nunjucks-async": "^1.0.1",
     "koa-router": "^7.3.0",
     "koa-socket-2": "^1.0.17",
-    "socket.io": "^2.0.4"
+    "socket.io": "^4.0.0"
   }
 }
